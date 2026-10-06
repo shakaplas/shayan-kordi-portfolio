@@ -103,3 +103,36 @@
   .story-card,.journey-panel{border-radius:22px}.journey-step{grid-template-columns:82px 17px 1fr}.journey-connector{margin-left:89px}
 }
 @media(max-width:430px){:root{--page-gutter:18px}.hero-stage{padding:18px}.hero-photo-panel{max-width:285px}.photo-caption{flex-direction:column;gap:1px}.story-card,.journey-panel{padding:23px}}
+
+
+/* V5 — stronger personal hook and clearer narrative hierarchy */
+.hero-content .hero-lead{
+  font-size:clamp(1.38rem,2vw,1.72rem);
+  line-height:1.43;
+  font-weight:760;
+  letter-spacing:-.018em;
+  color:#1d344e;
+  max-width:625px;
+}
+.hero-content .hero-note{
+  font-size:1rem;
+  line-height:1.78;
+  max-width:625px;
+}
+.story-card h3{
+  max-width:620px;
+}
+@media(max-width:980px){
+  .hero-content .hero-lead{max-width:690px}
+  .hero-content .hero-note{max-width:680px}
+}
+@media(max-width:760px){
+  .hero-content .hero-lead{
+    font-size:clamp(1.22rem,5.2vw,1.48rem);
+    line-height:1.48;
+  }
+  .hero-content .hero-note{
+    font-size:.96rem;
+    line-height:1.72;
+  }
+}
