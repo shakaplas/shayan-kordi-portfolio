@@ -137,25 +137,158 @@
   }
 }
 
-
-/* Taiwan Bike Tour project — additive styles only; existing site styles remain unchanged */
+/* Taiwan Bike Tour project — revised visual presentation only */
 .project-extra{margin-top:44px}
 .project-extra-heading{margin-bottom:18px}
 .project-extra-heading h3{margin-top:10px;font-size:1.4rem;letter-spacing:-.02em}
-.bike-project-card{min-height:auto;padding:30px}
-.bike-project-layout{display:grid;grid-template-columns:minmax(0,.92fr) minmax(420px,1.08fr);gap:30px;align-items:start}
-.bike-project-copy{display:flex;flex-direction:column;min-height:100%}
-.bike-project-hook{font-size:1.05rem;line-height:1.62;font-weight:750;color:#34465d!important;margin-bottom:14px!important}
-.bike-project-copy p strong{color:var(--ink)}
-.bike-project-outcome{margin-top:22px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
-.bike-project-outcome span{display:block;margin-bottom:4px;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.bike-project-outcome strong{display:block;font-size:.9rem;line-height:1.5}
-.bike-project-visuals{display:grid;grid-template-columns:1.18fr .82fr;gap:12px;align-items:stretch}
-.bike-project-visuals figure{margin:0;overflow:hidden;border:1px solid var(--line);border-radius:16px;background:#fff}
-.bike-project-visuals img{width:100%;height:100%;display:block;object-fit:cover}
-.bike-main-visual{display:grid;grid-template-rows:1fr auto;min-height:360px}
-.bike-main-visual img{object-fit:contain;background:#f7f9fc}
-.bike-secondary-visual{display:grid;grid-template-rows:1fr auto;min-height:360px}
-.bike-project-visuals figcaption{padding:9px 11px;border-top:1px solid var(--line);background:#fff;color:var(--muted);font-size:.7rem;line-height:1.4}
-@media(max-width:980px){.bike-project-layout{grid-template-columns:1fr}.bike-project-visuals{grid-template-columns:1.25fr .75fr}}
-@media(max-width:760px){.project-extra{margin-top:34px}.bike-project-card{padding:23px}.bike-project-visuals{grid-template-columns:1fr}.bike-main-visual,.bike-secondary-visual{min-height:auto}.bike-project-visuals img{height:auto}}
+
+.bike-project-card{
+  min-height:auto;
+  padding:0;
+  overflow:hidden;
+  background:#fff;
+}
+
+.bike-project-hero{
+  position:relative;
+  min-height:500px;
+  display:flex;
+  align-items:flex-end;
+  background:url("assets/taiwan-bike-tour-scenic.png") center 58% / cover no-repeat;
+}
+
+.bike-project-hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    180deg,
+    rgba(10,24,40,.10) 0%,
+    rgba(10,24,40,.30) 42%,
+    rgba(10,24,40,.88) 100%
+  );
+}
+
+.bike-project-hero-content{
+  position:relative;
+  z-index:1;
+  width:min(780px,100%);
+  padding:42px;
+  color:#fff;
+}
+
+.bike-project-head{color:rgba(255,255,255,.78)}
+
+.bike-project-card .project-icon{
+  border-color:rgba(255,255,255,.30);
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  backdrop-filter:blur(8px);
+}
+
+.bike-project-card h3{
+  max-width:740px;
+  margin:24px 0 14px;
+  color:#fff;
+  font-size:clamp(2rem,3.3vw,3.25rem);
+}
+
+.bike-project-hook{
+  max-width:700px;
+  margin:0 0 14px!important;
+  color:#fff!important;
+  font-size:1.12rem;
+  line-height:1.62;
+  font-weight:760;
+}
+
+.bike-project-summary{
+  max-width:720px;
+  margin:0 0 20px!important;
+  color:rgba(255,255,255,.90)!important;
+}
+
+.bike-project-summary strong{color:#fff}
+
+.bike-project-skills{margin-top:8px}
+
+.bike-project-skills span{
+  border-color:rgba(255,255,255,.26);
+  background:rgba(255,255,255,.12);
+  color:#fff;
+  backdrop-filter:blur(7px);
+}
+
+.bike-project-body{padding:30px}
+
+.bike-project-outcome{
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:18px;
+  align-items:start;
+  margin-bottom:24px;
+  padding:17px 19px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--paper);
+}
+
+.bike-project-outcome span{
+  display:block;
+  font-size:.66rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.bike-project-outcome strong{
+  display:block;
+  font-size:.92rem;
+  line-height:1.5;
+}
+
+.bike-infographic-large{
+  margin:0;
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#f7f9fc;
+}
+
+.bike-infographic-large a{display:block}
+
+.bike-infographic-large img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+  background:#f7f9fc;
+}
+
+.bike-infographic-large figcaption{
+  padding:10px 12px;
+  border-top:1px solid var(--line);
+  background:#fff;
+  color:var(--muted);
+  font-size:.72rem;
+  line-height:1.4;
+  text-align:center;
+}
+
+@media(max-width:980px){
+  .bike-project-hero{
+    min-height:520px;
+    background-position:center;
+  }
+}
+
+@media(max-width:760px){
+  .project-extra{margin-top:34px}
+  .bike-project-hero{min-height:560px}
+  .bike-project-hero-content{padding:26px}
+  .bike-project-body{padding:22px}
+  .bike-project-outcome{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+}
